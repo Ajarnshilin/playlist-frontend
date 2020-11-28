@@ -85,8 +85,8 @@ function Content() {
           <h1>MY PLAYLIST</h1>
           <span>CREART BY asdjalsdjldsjf: 2 song ,7 min 44 sec</span>
           <Space/>
-            {songJson.map((item) => (
-              <SongContainer>
+            {songJson.slice(0,5).sort((a,b) => Math.random() - Math.random()).map((item, key) => (
+              <SongContainer key={item.id}>
                 <SongTitleContainer>{item.title}</SongTitleContainer>
                 <SongArtistContainer>{item.artist}</SongArtistContainer>
                 <SongDurationContainer>{item.duration}</SongDurationContainer>
