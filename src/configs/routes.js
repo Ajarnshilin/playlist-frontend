@@ -10,10 +10,5 @@ export default {
     path: '/login',
     exact: true,
     component: lazy(() => import('../pages/Login'))
-  },
-  Register: {
-    path: '/register',
-    exact: true,
-    component: lazy(() => import('../pages/Register'))
   }
 }
