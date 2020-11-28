@@ -12,14 +12,14 @@ export async function getData (table) {
     }
   ).then(response => response.data.data)
 }
-export async function Login (userEmail, userPassword, tokenAPI) {
+export async function fetchLogin (userUsername, userPassword) {
   return await axios(
     {
-      method: 'POST',
+      method: 'GET',
       url: `${API_ENDPOINT}/${API_VER}/login`,
-      headers: { ...JSON_HEADER, Authorization: `Bearer ${tokenAPI}` },
+      headers: { ...JSON_HEADER },
       data: JSON.stringify({
-        email: userEmail,
+        username: userUsername,
         password: userPassword
       })
     }

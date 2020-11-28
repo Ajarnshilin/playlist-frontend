@@ -11,9 +11,9 @@ export default {
     exact: true,
     component: lazy(() => import('../pages/Login'))
   },
-  Register: {
-    path: '/register',
+  NewPlaylist: {
+    path: '/newplaylist',
     exact: true,
-    component: lazy(() => import('../pages/Register'))
+    component: lazy(() => import('../pages/Newplaylist'))
   }
 }
