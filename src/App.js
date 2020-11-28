@@ -1,7 +1,7 @@
 import Popup from './components/Popup'
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import routes from './config/routes'
+import routes from './configs/routes'
 import styled from 'styled-components'
 import { Reset } from 'styled-reset'
 
