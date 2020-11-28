@@ -1,5 +1,5 @@
 import React from "react";
-import Popup from "./components/Popup";
+import Popup from "../components/Popup";
 
 function NewPlaylist() {
   return (
