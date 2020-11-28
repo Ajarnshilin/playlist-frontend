@@ -21,14 +21,16 @@ const Wrapper = styled.div`
 `;
 
 const Pic = styled.div`
-  width: 15vw;
-  height: 25vh;
+  width: 25vw;
+  height: 20vh;
   background-color: #f5ce7a;
   border:5px solid black;
-  margin-left: 2rem;
   margin-top:2rem;
+  margin-left:2rem;
+  padding: 2rem;
+  
   span {
-    margin-top:0.5rem;
+   
     font-size: 10rem;
     font-weight: 600;
     display: flex;
