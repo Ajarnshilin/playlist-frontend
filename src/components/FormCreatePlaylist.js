@@ -55,9 +55,7 @@ const Title = styled.span`
 
 function FormCreatePlaylist(callback) {
   const [values, setValues] = useState({
-    title: "",
-    details: "",
-    party_size: ""
+    playlist: ""
     // date:''
   });
 
