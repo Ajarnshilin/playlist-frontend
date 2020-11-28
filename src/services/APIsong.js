@@ -11,12 +11,12 @@ export async function storePlaylist(name,user_id = 1) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({  
-      id_song : null,
+      id_song : "AA",
       name : name,
-      user_id : user_id
+      user_id : 1
     })
   }
-  return fetch('http://127.0.0.1:3333/api/v1/playlists', requestOptions).then(response => response.json())
+  return fetch('http://127.0.0.1:3333/api/v1/playlists/', requestOptions).then(response => response.json())
 }
 export async function updatePlaylist(data,playlist_id) {
   const requestOptions = {
