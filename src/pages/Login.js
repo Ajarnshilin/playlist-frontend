@@ -1,3 +1,6 @@
+// import styled from "styled-components";
+import Sign from "../components/SignStyle"
+
 import React, { useState } from 'react'
 import styled from 'styled-components'
 // import { Provider, useLogin } from '../contexts/LoginContext'
@@ -31,6 +34,7 @@ function Login () {
   return (
     <>
     {/* <Provider> */}
+    <Sign/>
       <Conatiner>
         <input type='text' name='username' placeholder='Email...' value={email} onChange={handleOnEmailOnChange} onKeyDown={handleKeyPress}/>
         <input type='password' name='password' placeholder='Password...' value={password} onChange={handleOnPasswordOnChange} onKeyDown={handleKeyPress}/>
