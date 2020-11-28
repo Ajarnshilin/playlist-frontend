@@ -4,9 +4,11 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 85%;
   height: 100vh;
-  background-color: greenyellow;
+  background-color: #ffff;
   margin: 0;
   padding: 0;
+
+
 `;
 
 const Wrapper = styled.div`
@@ -14,20 +16,18 @@ const Wrapper = styled.div`
   height: auto;
   display: flex;
 
-  h1 {
-    margin-top: 1.6rem;
-    margin-right: 9rem;
-  }
+
 `;
 
 const Pic = styled.div`
   width: 15vw;
   height: 25vh;
-  background-color: blue;
-
-  margin-top: 2rem;
+  background-color: #f5ce7a;
+  border:5px solid black;
   margin-left: 2rem;
+  margin-top:2rem;
   span {
+    margin-top:0.5rem;
     font-size: 10rem;
     font-weight: 600;
     display: flex;
@@ -38,8 +38,15 @@ const Pic = styled.div`
 
 const Text = styled.div`
   margin-left: 2rem;
-
+  h1 {
+    font-size:3rem;
+    font-weight:600;
+    margin-top: 1.6rem;
+    margin-right: 9rem;
+    margin-bottom:1rem;
+  }
   span {
+    margin-top:2rem;
     margin-left: 0;
   }
 `;
