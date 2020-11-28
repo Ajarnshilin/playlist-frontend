@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const Backgroud = styled.div`
   background-color: black;
@@ -29,14 +30,16 @@ const Box = styled.div`
     font-weight: bold;
   }
 `;
-
+const CloseButton = styled.div``;
 function PopUp() {
+  const history = useHistory();
   return (
     <>
       <Backgroud />
       <Container>
         <Box>
           <h1>Create Playlist</h1>
+          <CloseButton onClick={() => history.goBack()}>click</CloseButton>
         </Box>
       </Container>
     </>
