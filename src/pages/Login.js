@@ -11,19 +11,18 @@ const Conatiner = styled.div`
 `
 
 function Login () {
-  const [email, setEmail] = useState('')
+  const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [token, setToken] = useState('')
 
-  const handleOnEmailOnChange = (event) => {
-    setEmail(event.target.value)
+  const handleOnUsernameChange = (event) => {
+    setUsername(event.target.value)
   }
-  const handleOnPasswordOnChange = event => {
+  const handleOnPasswordChange = event => {
     setPassword(event.target.value)
   }
   const handleOnSubmit = async event => {
-    if (email !== '' && password !== '') {
-      await fetchLogin(email, password).then(response => console.log(response))
+    if (username !== '' && password !== '') {
+      await fetchLogin(username, password).then(response => console.log(response))
     }
   }
   const handleKeyPress = event => {
@@ -36,8 +35,8 @@ function Login () {
     {/* <Provider> */}
     <Sign/>
       <Conatiner>
-        <input type='text' name='username' placeholder='Email...' value={email} onChange={handleOnEmailOnChange} onKeyDown={handleKeyPress}/>
-        <input type='password' name='password' placeholder='Password...' value={password} onChange={handleOnPasswordOnChange} onKeyDown={handleKeyPress}/>
+        <input type='text' name='username' placeholder='username...' value={username} onChange={handleOnUsernameChange} onKeyDown={handleKeyPress}/>
+        <input type='password' name='password' placeholder='Password...' value={password} onChange={handleOnPasswordChange} onKeyDown={handleKeyPress}/>
         <button type='submit' onClick={handleOnSubmit}>Submit</button>
       </Conatiner>
     {/* </Provider> */}
