@@ -144,13 +144,13 @@ function Content() {
                 <SongTitleContainer>{item.title}</SongTitleContainer>
                 <SongArtistContainer>{item.artist}</SongArtistContainer>
                 <SongDurationContainer>{item.duration}</SongDurationContainer>
+                <Remove type="submit">Remove</Remove>
+                {/* <Add type="submit">Remove</Add> */}
               </SongContainer>
             ))}
         </Text>
       </Wrapper>
 
-      <Remove type="submit">Remove</Remove>
-      <Add type="submit">Remove</Add>
 
     </Container>
   );
