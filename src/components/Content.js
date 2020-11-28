@@ -21,14 +21,16 @@ const Wrapper = styled.div`
 `;
 
 const Pic = styled.div`
-  width: 15vw;
-  height: 25vh;
+  width: 25vw;
+  height: 20vh;
   background-color: #f5ce7a;
   border:5px solid black;
-  margin-left: 2rem;
   margin-top:2rem;
+  margin-left:2rem;
+  padding: 2rem;
+  
   span {
-    margin-top:0.5rem;
+   
     font-size: 10rem;
     font-weight: 600;
     display: flex;
@@ -144,13 +146,13 @@ function Content() {
                 <SongTitleContainer>{item.title}</SongTitleContainer>
                 <SongArtistContainer>{item.artist}</SongArtistContainer>
                 <SongDurationContainer>{item.duration}</SongDurationContainer>
+                <Remove type="submit">Remove</Remove>
+                {/* <Add type="submit">Remove</Add> */}
               </SongContainer>
             ))}
         </Text>
       </Wrapper>
 
-      <Remove type="submit">Remove</Remove>
-      <Add type="submit">Remove</Add>
 
     </Container>
   );
