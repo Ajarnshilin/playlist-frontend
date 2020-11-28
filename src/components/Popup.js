@@ -23,7 +23,7 @@ const Container = styled.div`
 const Box = styled.div`
   padding: 1rem;
   width: 500px;
-  height: 280px;
+  height: 250px;
   background-color: #badee0;
   border: 3px solid black;
 
