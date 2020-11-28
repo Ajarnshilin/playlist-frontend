@@ -11,14 +11,9 @@ const Container = styled.div`
   padding: 0;
 `;
 
-<<<<<<< HEAD
-
-const Wrapper = styled.div``;
-=======
 const Wrapper = styled.div`
  margin-top:2rem;
  `;
->>>>>>> c06df6d63bc618871eafa9f17ef5fd1ef53616b4
 
 const ActionContainer = styled.div``;
 
