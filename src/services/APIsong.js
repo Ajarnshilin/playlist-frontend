@@ -1,8 +1,8 @@
 export async function getPlaylist (user_id) {
-  return  fetch(`http://127.0.0.1:3333/api/v1/playlists/${user_id}}`).then(response => response.json())
+  return  fetch(`http://127.0.0.1:3333/api/v1/playlists/${user_id}}`).then(response => response.json()).then(response => response.data)
 }
 export async function getDataInPlaylist (playlist_id) {
-  return  fetch(`http://127.0.0.1:3333/api/v1/playlistsIn/${playlist_id}`).then(response => response.json())
+  return  fetch(`http://127.0.0.1:3333/api/v1/playlistsIn/${playlist_id}`).then(response => response.json()).then(response => response.data)
 }
 export async function storePlaylist(name,user_id = 1) {
   const requestOptions = {
