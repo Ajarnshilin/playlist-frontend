@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+// import { useHistory } from "react-router-dom";
+import FormCreatePlaylist from "./FormCreatePlaylist";
 
 const Backgroud = styled.div`
   background-color: black;
@@ -21,8 +23,9 @@ const Container = styled.div`
 const Box = styled.div`
   padding: 1rem;
   width: 500px;
-  height: 350px;
-  background-color: yellow;
+  height: 280px;
+  background-color: #badee0;
+  border: 3px solid black;
 
   h1 {
     text-align: left;
@@ -30,13 +33,17 @@ const Box = styled.div`
   }
 `;
 
+// const CloseButton = styled.div``;
 function PopUp() {
+  // const history = useHistory();
   return (
     <>
       <Backgroud />
       <Container>
         <Box>
-          <h1>Create Playlist</h1>
+          <FormCreatePlaylist />
+
+          {/* <CloseButton onClick={() => history.goBack()}>click</CloseButton> */}
         </Box>
       </Container>
     </>

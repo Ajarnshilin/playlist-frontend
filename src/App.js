@@ -1,7 +1,7 @@
-import Popup from './components/Popup'
+// import Popup from './components/Popup'
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import routes from './config/routes'
+import routes from './configs/routes'
 import { Reset } from 'styled-reset'
 
 function App () {
@@ -11,7 +11,7 @@ function App () {
       <Router>
         <Suspense fallback='...loading'>
           <Switch>
-            <Popup />
+            {/* <Popup /> */}
             {Object.keys(routes).map(routeKey => (
               <Route Key={routeKey} {...routes[routeKey]} />
             ))}
