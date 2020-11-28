@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import songJson from "../songs.json"
 
 const Container = styled.div`
   width: 85%;
@@ -39,10 +40,39 @@ const Pic = styled.div`
 const Text = styled.div`
   margin-left: 2rem;
 
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
   span {
-    margin-left: 0;
+    font-size: 2rem;
+    margin-left: 15%;
   }
 `;
+const Space = styled.div`
+  margin-bottom: 2rem;
+`
+const SongContainer = styled.div`
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+`
+const SongTitleContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+`
+const SongArtistContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+`
+const SongDurationContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+`
 
 function Content() {
   return (
@@ -54,7 +84,14 @@ function Content() {
         <Text>
           <h1>MY PLAYLIST</h1>
           <span>CREART BY asdjalsdjldsjf: 2 song ,7 min 44 sec</span>
-          <p></p>
+          <Space/>
+            {songJson.map((item) => (
+              <SongContainer>
+                <SongTitleContainer>{item.title}</SongTitleContainer>
+                <SongArtistContainer>{item.artist}</SongArtistContainer>
+                <SongDurationContainer>{item.duration}</SongDurationContainer>
+              </SongContainer>
+            ))}
         </Text>
       </Wrapper>
     </Container>
