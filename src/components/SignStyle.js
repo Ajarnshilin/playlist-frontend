@@ -1,12 +1,15 @@
+import React from "react";
 import styled from "styled-components";
 
-export const Container = styled.div`
+// page
+
+const Container = styled.div`
   display: flex;
   width: 100vw;
   height: 100vh;
 `;
 // nav
-export const RightContainer = styled.div`
+const RightContainer = styled.div`
   background-color: #030720;
   width: 50vw;
   height: 100vh;
@@ -14,7 +17,7 @@ export const RightContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const Logo = styled.div`
+const Logo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +29,7 @@ export const Logo = styled.div`
 `;
 
 // myplay
-export const LeftContainer = styled.div`
+const LeftContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,14 +37,14 @@ export const LeftContainer = styled.div`
   width: 50vw;
   height: 100vh;
 `;
-export const SignContainer = styled.div`
+const SignContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 30px;
   color: #ffffff;
 `;
-export const HeadSign = styled.div`
+const HeadSign = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
@@ -50,7 +53,7 @@ export const HeadSign = styled.div`
   margin: 2rem;
 `;
 
-export const Input = styled.input`
+const Input = styled.input`
   margin: 1rem;
   width: 25rem;
   height: 2.5rem;
@@ -60,7 +63,7 @@ export const Input = styled.input`
   padding-left: 20px;
 `;
 
-export const ButtonSubmit = styled.div`
+const ButtonSubmit = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +82,7 @@ export const ButtonSubmit = styled.div`
     cursor: pointer;
   }
 `;
-export const Register = styled.div`
+const Register = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,3 +93,25 @@ export const Register = styled.div`
     cursor: pointer;
   }
 `;
+
+export default function App() {
+  return (
+    <>
+      <Container>
+        <RightContainer>
+          <Logo> M </Logo>
+        </RightContainer>
+
+        <LeftContainer>
+          <SignContainer>
+            <HeadSign>Login</HeadSign>
+            <Input placeholder="Username.."></Input>
+            <Input placeholder="Password.."></Input>
+            <ButtonSubmit>Submit</ButtonSubmit>
+            <Register>Created new account</Register>
+          </SignContainer>
+        </LeftContainer>
+      </Container>
+    </>
+  );
+}
