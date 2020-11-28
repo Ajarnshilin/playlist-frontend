@@ -78,6 +78,58 @@ const SongDurationContainer = styled.div`
   flex-direction: column;
 `
 
+const Remove = styled.button`
+  height: 45px;
+  width: 110px;
+  background-color: #deaead;
+  margin-top: 30px;
+  border: 0;
+  color: black;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  &:hover {
+    background-color: #bd8584;
+  }
+`;
+
+const Add = styled.button`
+  height: 45px;
+  width: 110px;
+  background-color: #a1bdc7;
+  margin-top: 30px;
+  border: 0;
+  color: black;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  &:hover {
+    background-color: #799eab;
+  }
+`;
+
+const Refresh = styled.button`
+  height: 45px;
+  width: 110px;
+  background-color: #ebc3a7;
+  margin-top: 30px;
+  border: 0;
+  color: black;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  &:hover {
+    background-color: #c99c7d;
+  }
+`;
+
+
 function Content() {
   return (
     <Container>
@@ -89,15 +141,19 @@ function Content() {
           <h1>MY PLAYLIST</h1>
           <span>CREART BY asdjalsdjldsjf: 2 song ,7 min 44 sec</span>
           <Space/>
-            {songJson.map((item) => (
-              <SongContainer>
+            {songJson.slice(0,5).sort((a,b) => Math.random() - Math.random()).map((item, key) => (
+              <SongContainer key={item.id}>
                 <SongTitleContainer>{item.title}</SongTitleContainer>
                 <SongArtistContainer>{item.artist}</SongArtistContainer>
                 <SongDurationContainer>{item.duration}</SongDurationContainer>
+                <Remove type="submit">Remove</Remove>
+                {/* <Add type="submit">Remove</Add> */}
               </SongContainer>
             ))}
         </Text>
       </Wrapper>
+
+
     </Container>
   );
 }
