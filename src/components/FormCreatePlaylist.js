@@ -5,6 +5,10 @@ import { storePlaylist } from "./../services/APIsong";
 
 const Container = styled.div`
   margin-left: 2rem;
+
+  h1{
+    font-size:2rem;
+  }
 `;
 
 const ButtonContainer = styled.div`
