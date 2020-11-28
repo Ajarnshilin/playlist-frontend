@@ -5,14 +5,16 @@ import { storePlaylist } from "./../services/APIsong";
 
 const Container = styled.div`
   margin-left: 2rem;
+  
 
   h1{
     font-size:2rem;
+    margin-bottom:2rem;
   }
 `;
 
 const ButtonContainer = styled.div`
-  margin-left: 8.5rem;
+  margin-left: 10rem;
 `;
 
 const Form = styled.form`
