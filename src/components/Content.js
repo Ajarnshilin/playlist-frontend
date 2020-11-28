@@ -44,6 +44,58 @@ const Text = styled.div`
   }
 `;
 
+const Remove = styled.button`
+  height: 45px;
+  width: 110px;
+  background-color: #deaead;
+  margin-top: 30px;
+  border: 0;
+  color: black;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  &:hover {
+    background-color: #bd8584;
+  }
+`;
+
+const Add = styled.button`
+  height: 45px;
+  width: 110px;
+  background-color: #a1bdc7;
+  margin-top: 30px;
+  border: 0;
+  color: black;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  &:hover {
+    background-color: #799eab;
+  }
+`;
+
+const Refresh = styled.button`
+  height: 45px;
+  width: 110px;
+  background-color: #ebc3a7;
+  margin-top: 30px;
+  border: 0;
+  color: black;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  &:hover {
+    background-color: #c99c7d;
+  }
+`;
+
+
 function Content() {
   return (
     <Container>
@@ -57,6 +109,10 @@ function Content() {
           <p></p>
         </Text>
       </Wrapper>
+
+      <Remove type="submit">Remove</Remove>
+      <Add type="submit">Remove</Add>
+
     </Container>
   );
 }
