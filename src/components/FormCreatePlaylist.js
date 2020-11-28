@@ -63,19 +63,22 @@ function FormCreatePlaylist(callback) {
     // date:''
   });
 
+  const [name ,setName] = useState("")
+
   const [isSubmitting] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setValues({
-      ...values,
-      [name]: value
-    });
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setValues({
+  //     ...values,
+  //     [name]: value
+  //   });
+  // };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     storePlaylist(name) 
+    // e.preventDefault();
+    
     // console.log(values,"1")
     // PostAPI({...values, user_id: userId})
     // console.log(userId)
@@ -100,8 +103,8 @@ function FormCreatePlaylist(callback) {
             type="text"
             name="playlist"
             id="playlist"
-            value={values.playlist}
-            onChange={handleChange}
+            // value={values.playlist}
+            onChange={ (e) => {setName(e.target.value)}}
           ></Input>
           <ButtonContainer>
             <Button type="submit">Create</Button>
