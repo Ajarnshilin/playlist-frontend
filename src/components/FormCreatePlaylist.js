@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { storePlaylist } from "./../services/APIsong";
+
 
 const Container = styled.div`
   margin-left: 2rem;
@@ -55,7 +57,9 @@ const Title = styled.span`
 
 function FormCreatePlaylist(callback) {
   const [values, setValues] = useState({
-    playlist: ""
+    title: "",
+    details: "",
+    party_size: ""
     // date:''
   });
 
@@ -71,6 +75,7 @@ function FormCreatePlaylist(callback) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    storePlaylist(name) 
     // console.log(values,"1")
     // PostAPI({...values, user_id: userId})
     // console.log(userId)
